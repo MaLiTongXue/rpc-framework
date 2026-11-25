@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--
+        聚合构建：原课程的各个模块是相互独立的，需要按依赖顺序逐个 install。
+        这里加一个聚合 pom，一条命令就能把整个项目编出来。
+    -->
+    <groupId>com.wangdongrui</groupId>
+    <artifactId>rpc-framework</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+    <name>rpc-framework</name>
+    <description>一个最小可用的 RPC 框架（学习实现）</description>
+
+    <modules>
+        <module>yu-rpc-easy</module>
+        <module>example-common</module>
+        <module>example-consumer</module>
+        <module>example-provider</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+</project>
